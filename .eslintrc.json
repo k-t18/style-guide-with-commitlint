@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb", // Airbnb style guide rules
+    "airbnb/hooks", // Airbnb's React hooks rules
+    "plugin:@typescript-eslint/recommended", // TypeScript recommended rules
+    "plugin:jsx-a11y/recommended", // Accessibility rules
+    "plugin:prettier/recommended" // Prettier integration
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"],
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/no-unused-vars": "error", // No unused variables
+    "@typescript-eslint/no-explicit-any": "error", // Disallow usage of `any`
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "no-console": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": "off"
+  }
+}
