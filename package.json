@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postinstall": "node scripts/setup.js",
+    "postinstall": "node scripts/setup.ts",
     "lint": "next lint",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
